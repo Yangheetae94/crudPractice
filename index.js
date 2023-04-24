@@ -3,7 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 const { Post } = require('./models');
 
-
+mongoose.connect('mongodb+srv://htty94:비밀번호@cluster0.eierr6l.mongodb.net/test')
+   .then((res) => {
+    console.log('mongodb connected')
+   })
 
 app.use(express.json())
 
